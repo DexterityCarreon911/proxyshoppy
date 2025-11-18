@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShieldNet - Proxy & DDoS Protection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #000;
+            color: #00ff00;
+            line-height: 1.6;
+        }
+        a { color: #00ffff; text-decoration: none; }
+        a:hover { text-shadow: 0 0 10px #00ffff; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { position: fixed; top: 0; width: 100%; background-color: rgba(0,0,0,0.9); z-index: 1000; box-shadow: 0 0 20px #00ff00; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem; }
+        nav .logo { font-size: 1.5rem; font-weight: bold; text-shadow: 0 0 10px #00ff00; }
+        nav ul { list-style: none; display: flex; }
+        nav ul li { margin-left: 2rem; }
+        section { min-height: 100vh; padding: 100px 0 50px; display: none; }
+        section.active { display: block; }
+        #hero { background: linear-gradient(135deg, #000, #111); text-align: center; padding-top: 150px; }
+        #hero h1 { font-size: 3rem; margin-bottom: 1rem; text-shadow: 0 0 20px #00ff00; }
+        #hero p { font-size: 1.2rem; margin-bottom: 2rem; }
+        .btn { background-color: #00ff00; color: #000; padding: 1rem 2rem; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem; transition: .3s; box-shadow: 0 0 10px #00ff00; }
+        .btn:hover { background-color: #00ffff; box-shadow: 0 0 20px #00ffff; }
+        #contact { background-color: #111; text-align: center; }
+        .discord-box {
+            background-color: #222;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #00ff00;
+            max-width: 500px;
+            margin: 2rem auto;
+        }
+        .discord-box i { font-size: 3rem; color: #7289da; margin-bottom: 1rem; }
+        footer { background-color: #000; text-align: center; padding: 1rem; box-shadow: 0 0 10px #00ff00; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">ShieldNet</div>
+            <ul id="nav-menu">
+                <li><a href="#hero" onclick="showSection('hero')">Home</a></li>
+                <li><a href="#about" onclick="showSection('about')">About</a></li>
+                <li><a href="#features" onclick="showSection('features')">Features</a></li>
+                <li><a href="#pricing" onclick="showSection('pricing')">Pricing</a></li>
+                <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" class="active">
+        <div class="container">
+            <h1>Protect Your Digital Fortress</h1>
+            <p>Advanced proxy services and unbeatable DDoS protection to keep your online presence secure.</p>
+            <button class="btn" onclick="showSection('pricing')">Get Started</button>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 style="text-align:center; margin-bottom:2rem;">About ShieldNet</h2>
+            <p style="max-width:800px; margin:auto; text-align:center;">ShieldNet provides advanced proxy and DDoS protection services worldwide.</p>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <h2 style="text-align:center; margin-bottom:2rem;">Our Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>DDoS Mitigation</h3>
+                    <p>Real-time detection and blocking of DDoS attacks, ensuring 99.9% uptime.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-user-secret"></i>
+                    <h3>Anonymous Proxies</h3>
+                    <p>High-speed proxies with IP rotation for complete anonymity and privacy.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Lightning Fast</h3>
+                    <p>Optimized servers worldwide for minimal latency and maximum speed.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-lock"></i>
+                    <h3>End-to-End Encryption</h3>
+                    <p>Military-grade encryption to protect your data from interception.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Monitor traffic, threats, and performance in real-time.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Expert cybersecurity team available anytime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing">
+        <div class="container">
+            <h2 style="text-align:center; margin-bottom:2rem;">Pricing Plans</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Basic Proxy</h3>
+                    <div class="price">$9.99/month</div>
+                    <p>10GB bandwidth, 5 proxies, basic DDoS protection.</p>
+                    <button class="btn">Subscribe</button>
+                </div>
+                <div class="pricing-card">
+                    <h3>Pro Protection</h3>
+                    <div class="price">$15.99/month</div>
+                    <p>Unlimited bandwidth, 50 proxies, advanced DDoS mitigation.</p>
+                    <button class="btn">Subscribe</button>
+                </div>
+                <div class="pricing-card">
+                    <h3>Enterprise Shield</h3>
+                    <div class="price">$20.99/month</div>
+                    <p>Custom solutions, 500+ proxies, full enterprise DDoS protection.</p>
+                    <button class="btn">Subscribe</button>
+                </div>
+            </div>
+            <div class="payment-note" style="text-align:center; margin-top:2rem; color:#00ffff; text-shadow:0 0 10px #00ffff;">
+                <p>We accept GCASH and PayPal.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 style="text-align:center; margin-bottom:2rem;">Contact Us</h2>
+            <div class="discord-box">
+                <i class="fab fa-discord"></i>
+                <h3>Join our Discord</h3>
+                <p>Add us on Discord for support:</p>
+                <p style="color:#00ffff; font-size:1.4rem; margin-top:1rem;">Klyd2million_77914</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 ShieldNet. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(sec => sec.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
